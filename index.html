@@ -30,10 +30,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
     
-    <script src="./js/jquery-csv.js" type="text/javascript"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-
+    
     
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="css/themes/all-themes.css" rel="stylesheet" />
@@ -1003,8 +1000,13 @@
             <div class="row clearfix">
                 <!-- Visitors -->
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
                     <div class="card">
-                        <div class="body bg-pink">
+                        <input type="date" id="filterdate1">
+                                                <br><br>
+                                                <input type="date" id="filterdate2"><br><br>
+                                                <button type="button" class="btn-primary" onclick="getAdmissions()">View Admissions</button>
+                        <!--<div class="body bg-pink">
                             <div class="sparkline" data-type="line" data-spot-Radius="4" data-highlight-Spot-Color="rgb(233, 30, 99)" data-highlight-Line-Color="#fff"
                                  data-min-Spot-Color="rgb(255,255,255)" data-max-Spot-Color="rgb(255,255,255)" data-spot-Color="rgb(255,255,255)"
                                  data-offset="90" data-width="100%" data-height="92px" data-line-Width="2" data-line-Color="rgba(255,255,255,0.7)"
@@ -1025,7 +1027,7 @@
                                     <span class="pull-right"><b>26 582</b> <small>USERS</small></span>
                                 </li>
                             </ul>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <!-- #END# Visitors -->
@@ -1216,6 +1218,7 @@
                             <div id="donut_chart" class="dashboard-donut-chart"></div>
                         </div>
                     </div>
+                    <button type="button" onclick="getData()">Click this new button</button>
                 </div>
                 <!-- #END# Browser Usage -->
             </div>
@@ -1260,10 +1263,14 @@
     <!-- Custom Js -->
     <script src="js/admin.js"></script>
     <script src="js/pages/index.js"></script>
-    
+    <script src="./js/jquery-csv.js" type="text/javascript"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
     <!-- Demo Js -->
     <script src="js/demo.js"></script>
+<script src="js/timeseries2.js" type="text/javascript"></script>
+<script src="js/viz_filters.js" type="text/javascript"></script>
 </body>
 
 </html>
-<script src="js/timeseries.js" type="text/javascript"></script>
