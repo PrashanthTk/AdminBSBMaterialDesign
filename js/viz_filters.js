@@ -1,37 +1,25 @@
-function getAdmissions()
-{
-	var date1=$("#filterdate1").val();
-	var date2=$("#filterdate2").val();
-	console.log(date1+"\n"+date2);
-
-	//call database to get records into ajaxresponse
-	htmlcode="<table>";
-
-	var ajaxresponse={
-		"row1":"	"
-	}
-	businesscode(ajaxresponse,htmlcode);
-	
-			
-}
-function businesscode(ajaxresponse,htmlcode)
+function businesscode(results)
 {
 	// Method 1
 	//ajaxresponse = JSON.stringify(response);
-	/*$.each(ajaxdata, function() {
+	htmlcode="<table>";
+	$.each(results, function() {
 		htmlcode+="<tr>";
   $.each(this, function(k, v) {
     /// do stuff
-    html+=row+"</td>";
+    htmlcode+="<td>";
+    htmlcode+="key "+k+" value: "+v+"</td>";
     localStorage.setItem(k, v);
   })
   htmlcode+="</tr>";
   
 });
-html+="</table>";
+htmlcode+="</table>";
+console.log(htmlcode);
+$("#testtable").html(htmlcode);
 var newWindow = window.open();
-newWindow.document.write(html);
-*/
+newWindow.document.write(htmlcode);
+
 
 
 	//Method 2
@@ -41,4 +29,21 @@ newWindow.document.write(html);
       
       console.log(row.name)
   });*/
+}
+function getAdmissions()
+{
+	var date1=$("#filterdate1").val();
+	var date2=$("#filterdate2").val();
+	console.log(date1+"\n"+date2);
+
+	//call database to get records into ajaxresponse
+	
+
+	var ajaxresponse=[
+		["row1","value1"],
+		["row2","value2"]
+	];
+	businesscode(ajaxresponse);
+	
+			
 }
