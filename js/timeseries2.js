@@ -59,7 +59,7 @@ const tsdata = {
     }]
 }
 const options = {
-    type: 'bar',
+    type: 'line',
     data: tsdata,
     options: {
         fill: false,
@@ -233,7 +233,7 @@ function drawage_time(age_categories,yvalues)
     const tsdata = {
     labels:age_categories,
     datasets: yvalues,
-}
+                    }
 const options = {
     type: 'bar',
     data: tsdata,
@@ -293,7 +293,7 @@ function drawtime_adm_genderchart(times,males,females)
     }]
 }
 const options = {
-    type: 'bar',
+    type: 'line',
     data: tsdata,
     options: {
         fill: false,
@@ -325,11 +325,17 @@ const gender_chart = new Chart(tsctx, options);
 }
 function demo_dataplotter()
 {
-
+    var dates={
+        startdate:$("#filterdate1").val(),
+        enddate:$("#filterdate2").val()
+    };
+    //alert(dates.startdate);
+    // /console.log(dates.enddate);
     $.ajax({
     type: "GET",
     url: "./js/demo_data.json",
     dataType: "json",
+    data:dates,
     success: function(data) {
         //dat2 = $.csv.toArrays(data);
         //coords=handledata(dat2);
@@ -340,7 +346,8 @@ function demo_dataplotter()
         console.log(err);
     },});
 }
-function getData()
+
+/*function getData()
 {
     $.ajax({
     type: "GET",
@@ -357,7 +364,7 @@ function getData()
     },});
 }
 
-/*function tryutton()
+function tryutton()
 {
     alert("I am here")
 const tsctx = document.getElementById('time_series_chart').getContext('2d');

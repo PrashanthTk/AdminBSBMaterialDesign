@@ -34,7 +34,7 @@ function getAdmissions()
 {
 	var date1=$("#filterdate1").val();
 	var date2=$("#filterdate2").val();
-	console.log(date1+"\n"+date2);
+	console.log("dates are"+date1+"\n"+date2);
 
 	//call database to get records into ajaxresponse
 	
@@ -47,3 +47,4 @@ function getAdmissions()
 	
 			
 }
+//$("#view_patients").addEventListener('click',function(){alert('asdasd');})
