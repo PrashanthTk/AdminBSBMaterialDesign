@@ -833,7 +833,7 @@
              <div>
                 <label>Race</label>
                 <br>
-                    <Select class="form-control show-tick" id="Race" visibility="hidden">
+                    <Select class='selectpicker' class="form-control show-tick" id="Race" visibility="hidden">
                         <option value="">Select</option>
                         <option value="Caucasian">Caucasian</option>
                         <option value="AfricanAmerican">AfricanAmerican</option>
@@ -846,7 +846,7 @@
              
               <div>  <label>Admission Source</label>
                 <br>
-                    <Select id="Admission_Source">
+                    <Select class='selectpicker' id="Admission_Source">
                         <option value="">Select</option>
                         <option value="Emergency Room">Emergency Room</option>
                         <option value="Physician Referral">Physician Referral</option>
@@ -864,7 +864,7 @@
              
                 <label>Admission Type</label>
                 <br>
-                    <Select id="Admission_Type">
+                    <Select class='selectpicker' id="Admission_Type">
                         <option value="">Select</option>
                         <option value="Emergency">Emergency</option>
                         <option value="Elective">Elective</option>
@@ -877,7 +877,7 @@
              
                 <label>Insulin</label>
                 <br>
-                    <Select id="Insulin">
+                    <Select class='selectpicker' id="Insulin">
                         <option value="">Select</option>
                         <option value="No">No</option>
                         <option value="Steady">Steady</option>
@@ -896,7 +896,7 @@
              
                 <label>Discharge Disposition</label>
                 <br>
-                    <Select id="Discharge_Disposition">
+                    <Select class='selectpicker' id="Discharge_Disposition">
                         <option value="">Select</option>
                         <option value="Discharged to home">Discharged to home</option>
                         <option value="Discharged/transferred to SNF">Discharged/transferred to SNF</option>
@@ -914,7 +914,7 @@
              
                 <label>Medical Specialty</label>
                 <br>
-                    <Select id="Medical_Specialty">
+                    <Select class='selectpicker' id="Medical_Specialty">
                         <option value="">Select</option>
                         <option value="InternalMedicine">InternalMedicine</option>
                         <option value="Emergency/Trauma">Emergency/Trauma</option>
@@ -932,7 +932,7 @@
              
                 <label>Payer Code</label>
                 <br>
-                    <Select id="Payer_Code">
+                    <Select class='selectpicker' id="Payer_Code">
                         <option value="">Select</option>
                         <option value="MC">MC</option>
                         <option value="HM">HM</option>
@@ -991,4 +991,7 @@
 
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.3.min.js"></script>
 <script src="../../js/aws-ml-model.js"></script>
+<script type="text/javascript">
+$('.selectpicker').selectpicker();
+</script>
 </html>
