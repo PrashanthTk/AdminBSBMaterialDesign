@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Readmission Alert Discharge Plan</title>
+    <title>Normal Tables | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css" rel="stylesheet"></link>
-
-
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -25,15 +21,13 @@
     <!-- Animation Css -->
     <link href="../../plugins/animate-css/animate.css" rel="stylesheet" />
 
-    <!-- Sweet Alert Css -->
-    <link href="../../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
-
     <!-- Custom Css -->
     <link href="../../css/style.css" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="../../css/themes/all-themes.css" rel="stylesheet" />
 </head>
+
 <body class="theme-red">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
@@ -72,7 +66,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="../../index.html">XYZ Hospital Readmission Analyzer</a>
+                <a class="navbar-brand" href="../../index.html">ADMINBSB - MATERIAL DESIGN</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -444,7 +438,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
                             <span>Forms</span>
@@ -456,7 +450,7 @@
                             <li>
                                 <a href="../../pages/forms/advanced-form-elements.html">Advanced Form Elements</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="../../pages/forms/form-examples.html">Form Examples</a>
                             </li>
                             <li>
@@ -470,13 +464,13 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">view_list</i>
                             <span>Tables</span>
                         </a>
                         <ul class="ml-menu">
-                            <li>
+                            <li class="active">
                                 <a href="../../pages/tables/normal-tables.html">Normal Tables</a>
                             </li>
                             <li>
@@ -797,176 +791,83 @@
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>Discharge Care Transition Form for Patient ABC</h2>
+                <h2>NORMAL TABLES</h2>
             </div>
-
-            <!-- Vertical Layout -->
-            
-            <!-- #END# Vertical Layout -->
-            <!-- Vertical Layout | With Floating Label -->
+            <!-- Basic Table -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="body">
-                                <div class="row clearfix">
-                        <div id="id01">
-
-        <label style="font-size: 20px; font-style: italic;">Select a few patient attributes and click predict to generate a prediction score. Use different combinations of attributes to alter the score.</label>
-        
-             
-                <label>Gender</label>
-                <br>
-                <div class="demo-radio-button">
-                    <input type="radio" name="field2" id="gender_male" value="Male">Male</input>
-                    <input type="radio" name="field2" id="gender_female" value="Female">Female</input>
-                </div>
-                <br>
-             
-             
-                <label>Age Category</label>
-                <br>
-                    <input type="radio" name="field3" id="age_category_adult" value="Adult">Adult</input>
-                    <input type="radio" name="field3" id="age_category_old" value="Old">Old</input>
-                    <input type="radio" name="field3" id="age_category_young" value="Young">Young</input>
-                <br>
-             
-             <div>
-                <label>Race</label>
-                <br>
-                    <Select class='selectpicker' class="form-control show-tick" id="Race" visibility="hidden">
-                        <option value="">Select</option>
-                        <option value="Caucasian">Caucasian</option>
-                        <option value="AfricanAmerican">AfricanAmerican</option>
-                        <option value="Hispanic">Hispanic</option>
-                        <option value="Asian">Asian</option>
-                        <option value="Other">Other</option>
-                    </Select>
-                <br>
-             </div>
-             
-              <div>  <label>Admission Source</label>
-                <br>
-                    <Select class='selectpicker' id="Admission_Source">
-                        <option value="">Select</option>
-                        <option value="Emergency Room">Emergency Room</option>
-                        <option value="Physician Referral">Physician Referral</option>
-                        <option value="Transfer from a hospital">Transfer from a hospital</option>
-                        <option value="Transfer from another health care facility">Transfer from another health care facility</option>
-                        <option value="Clinic Referral">Clinic Referral</option>
-                        <option value="Transfer from a Skilled Nursing Facility (SNF)">Transfer from a Skilled Nursing Facility (SNF)</option>
-                        <option value="HMO Referral">HMO Referral</option>
-                        <option value="Court/Law Enforcement">Court/Law Enforcement</option>
-                        <option value="Transfer from hospital inpt/same fac reslt in a sep claim">Transfer from hospital inpt/same fac reslt in a sep claim</option>
-                        <option value="Transfer from critial access hospital">Transfer from critial access hospital</option>
-                    </Select>
-                <br>
-             </div>
-             
-                <label>Admission Type</label>
-                <br>
-                    <Select class='selectpicker' id="Admission_Type">
-                        <option value="">Select</option>
-                        <option value="Emergency">Emergency</option>
-                        <option value="Elective">Elective</option>
-                        <option value="Urgent">Urgent</option>
-                        <option value="Trauma Center">Trauma Center</option>
-                        <option value="Newborn">Newborn</option>
-                    </Select>
-                <br>
-             
-             
-                <label>Insulin</label>
-                <br>
-                    <Select class='selectpicker' id="Insulin">
-                        <option value="">Select</option>
-                        <option value="No">No</option>
-                        <option value="Steady">Steady</option>
-                        <option value="Up">Up</option>
-                        <option value="Down">Down</option>
-                    </Select>
-                <br>
-             
-             
-                <label>Diabetes Med</label>
-                <br>
-                    <input type="radio" name="field9" id="diabetes_med_yes" value="Yes">Yes</input>
-                    <input type="radio" name="field9" id="diabetes_med_no" value="No">No</input>
-                <br>
-             
-             
-                <label>Discharge Disposition</label>
-                <br>
-                    <Select class='selectpicker' id="Discharge_Disposition">
-                        <option value="">Select</option>
-                        <option value="Discharged to home">Discharged to home</option>
-                        <option value="Discharged/transferred to SNF">Discharged/transferred to SNF</option>
-                        <option value="Discharged/transferred to home with home health service">Discharged/transferred to home with home health service</option>
-                        <option value="Discharged/transferred to another short term hospital">Discharged/transferred to another short term hospital</option>
-                        <option value="Discharged/transferred to another rehab fac including rehab units of a hospital .">Discharged/transferred to another rehab fac including rehab units of a hospital .</option>
-                        <option value="Expired">Expired</option>
-                        <option value="Discharged/transferred to another type of inpatient care institution">Discharged/transferred to another type of inpatient care institution</option>
-                        <option value="Discharged/transferred to ICF">Discharged/transferred to ICF</option>
-                        <option value="Left AMA">Left AMA</option>
-                        <option value="Hospice / home">Hospice / home</option>
-                    </Select>
-                <br>
-             
-             
-                <label>Medical Specialty</label>
-                <br>
-                    <Select class='selectpicker' id="Medical_Specialty">
-                        <option value="">Select</option>
-                        <option value="InternalMedicine">InternalMedicine</option>
-                        <option value="Emergency/Trauma">Emergency/Trauma</option>
-                        <option value="Family/GeneralPractice">Family/GeneralPractice</option>
-                        <option value="Cardiology">Cardiology</option>
-                        <option value="Surgery-General">Surgery-General</option>
-                        <option value="Nephrology">Nephrology</option>
-                        <option value="Orthopedics">Orthopedics</option>
-                        <option value="Orthopedics-Reconstructive">Orthopedics-Reconstructive</option>
-                        <option value="Radiologist">Radiologist</option>
-                        <option value="Psychiatry">Psychiatry</option>
-                    </Select>
-                <br>
-             
-             
-                <label>Payer Code</label>
-                <br>
-                    <Select class='selectpicker' id="Payer_Code">
-                        <option value="">Select</option>
-                        <option value="MC">MC</option>
-                        <option value="HM">HM</option>
-                        <option value="SP">SP</option>
-                        <option value="BC">BC</option>
-                        <option value="MD">MD</option>
-                        <option value="CP">CP</option>
-                        <option value="UN">UN</option>
-                        <option value="CM">CM</option>
-                        <option value="OG">OG</option>
-                    </Select>
-                <br>
-             
-       
-        <button type="button" onclick="callApi();" style="Font-size:16px;font-weight:bold;margin:10px 0px;">Predict</button>
-        <button type="button" onclick="refresh();" style="Font-size:16px;font-weight:bold;margin:10px 0px;">Clear</button>
-    
+                        <div class="header">
+                            <h2>
+                                BASIC TABLES
+                                <small>Basic example without any additional modification classes</small>
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body table-responsive">
+                            <table class="table" id="patientlist">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>FIRST NAME</th>
+                                        <th>LAST NAME</th>
+                                        <th>USERNAME</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Larry</td>
+                                        <td>Jellybean</td>
+                                        <td>@lajelly</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Larry</td>
+                                        <td>Kikat</td>
+                                        <td>@lakitkat</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-    </div>
-</div>
-</div>
-</section>
-</div>
-</section>
-<div id="id02">
-        <label style="font-size:1.5em;">Result</label>
-        <div id="id04" style="font-size:1.7em;margin-top:0.5em;display:none;">Chance of readmission </div>
-        <div id="id03" style="display:none;"></div>
-    </div>
-    <div style="width: 100%; display: inline-block; background-color: #eeeeee; line-height: 30px; padding-left:5px;">Disclaimer: This website intends to demonstrate the use of Amazon Machine Learning for predicting readmissions. It is based on a fixed publicly available dataset. The output should be used for illustration purposes only. </div>
-</body>
-
-                   
+                </div>
+            </div>
+            <!-- #END# Basic Table -->
+            <!-- Striped Rows -->
+            <!--  -->
+                </div>
+                
+    </section>
 
     <!-- Jquery Core Js -->
     <script src="../../plugins/jquery/jquery.min.js"></script>
@@ -985,13 +886,9 @@
 
     <!-- Custom Js -->
     <script src="../../js/admin.js"></script>
-    <script src="../../js/disch_form.js"></script>
+
     <!-- Demo Js -->
     <script src="../../js/demo.js"></script>
+</body>
 
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.3.min.js"></script>
-<script src="../../js/aws-ml-model.js"></script>
-<script type="text/javascript">
-$('.selectpicker').selectpicker();
-</script>
 </html>

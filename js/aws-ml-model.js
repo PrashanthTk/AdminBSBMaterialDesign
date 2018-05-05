@@ -5,7 +5,12 @@ AWS.config.update({region:'us-east-1'});
    			 IdentityPoolId: 'us-east-1:e5fae68c-67c8-47a0-8b40-3a74e4091a48',
 			});*/
 			//AWS.config.credentials = new AWS.CognitoIdentityCredentials(parameters);
-  function callApi(){		
+  function callApi(finalInput){
+  
+  if(finalInput==null)
+  {
+
+  
 	
  		// set the Amazon Cognito region
   			//var machinelearning = new AWS.MachineLearning({apiVersion: '2014-12-12'});
@@ -67,8 +72,11 @@ AWS.config.update({region:'us-east-1'});
 		
 	    var remainingFields = '"'+"weight"+'"'+":"+'""'+","+'"'+"patient_nbr"+'"'+":"+'""'+","+'"'+"age"+'"'+":"+'""'+","+'"'+"encounter_id"+'"'+":"+'""'+","+'"'+"time_in_hospital"+'"'+":"+'""'+","+'"'+"num_lab_procedures"+'"'+":"+'""'+","+'"'+"num_procedures"+'"'+":"+'""'+","+'"'+"num_medications"+'"'+":"+'""'+","+'"'+"number_outpatient"+'"'+":"+'""'+","+'"'+"number_emergency"+'"'+":"+'""'+","+'"'+"number_inpatient"+'"'+":"+'""'+","+'"'+"diag_1"+'"'+":"+'""'+","+'"'+"diag_2"+'"'+":"+'""'+","+'"'+"diag_3"+'"'+":"+'""'+","+'"'+"number_diagnoses"+'"'+":"+'""'+","+'"'+"max_glu_serum"+'"'+":"+'""'+","+'"'+"a1cresult"+'"'+":"+'""'+","+'"'+"metformin"+'"'+":"+'""'+","+'"'+"repaglinide"+'"'+":"+'""'+","+'"'+"nateglinide"+'"'+":"+'""'+","+'"'+"chlorpropamide"+'"'+":"+'""'+","+'"'+"glimepiride"+'"'+":"+'""'+","+'"'+"acetohexamide"+'"'+":"+'""'+","+'"'+"glipizide"+'"'+":"+'""'+","+'"'+"glyburide"+'"'+":"+'""'+","+'"'+"tolbutamide"+'"'+":"+'""'+","+'"'+"pioglitazone"+'"'+":"+'""'+","+'"'+"rosiglitazone"+'"'+":"+'""'+","+'"'+"acarbose"+'"'+":"+'""'+","+'"'+"miglitol"+'"'+":"+'""'+","+'"'+"troglitazone"+'"'+":"+'""'+","+'"'+"tolazamide"+'"'+":"+'""'+","+'"'+"examide"+'"'+":"+'""'+","+'"'+"citoglipton"+'"'+":"+'""'+","+'"'+"glyburide_metformin"+'"'+":"+'""'+","+'"'+"glipizide_metformin"+'"'+":"+'""'+","+'"'+"glimepiride_pioglitazone"+'"'+":"+'""'+","+'"'+"metformin_rosiglitazone"+'"'+":"+'""'+","+'"'+"metformin_pioglitazone"+'"'+":"+'""'+","+'"'+"change"+'"'+":"+'""'+","+'"'+"readmission_result1"+'"'+":"+'""';
 		
-		var finalInput = "{"+ inputparam + remainingFields +"}";
-	
+
+		 finalInput = "{"+ inputparam + remainingFields +"}";
+	}
+
+
 		var obj = eval("(" + finalInput + ')');
 		var params = {
 	 	 	MLModelId: 'ml-2BSwrAYL2SX',
